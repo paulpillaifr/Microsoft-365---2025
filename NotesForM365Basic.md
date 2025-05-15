@@ -23,32 +23,34 @@
 ### 5. Lien ?
 https://learn.microsoft.com/fr-fr/security/zero-trust/deploy/identity
 
- ---
+---
 
-## 📝 Conditional Access
-> "C'est comme un videur intelligent pour ton ordinateur. Il vérifie :
-> - **Qui tu es** (ton mot de passe + téléphone)
-> - **D'où tu viens** (ta localisation)
-> - **Si ton appareil est sûr** (comme vérifier si tu as tes vaccins)
-> Avant de te laisser entrer dans tes apps de travail."
+## Conditional Access (Microsoft Entra ID)
 
-## 👔 Définition Pro (mots simples)
-> Mécanisme de sécurité qui applique des règles contextuelles (qui/quand/comment) pour contrôler l'accès aux ressources cloud.
+### 1. Définition
+- **Concept** : "Vérifie toujours avant d'accorder l'accès."
+- **Exemple** : Comme un aéroport avec passeport + scan de sécurité.
 
-## 🔑 Points Clés à Retenir
+### 2. Composants Clés
+- **Conditions** :
+  - Localisation (pays/réseau)
+  - Appareil (sécurisé/conforme)
+  - Risque (activité suspecte)
+  
+- **Actions** :
+  - Autoriser (accès complet)
+  - Bloquer (accès refusé)
+  - Exiger MFA (double vérification)
 
-### 1. Les 3 Composants Principaux
-- **Conditions** (QUAND appliquer) :
-  - 🌐 Localisation (IP/pays)
-  - 📱 Appareil (marqué/conforme)
-  - 🚨 Niveau de risque (détection d'anomalies)
+### 3. Exemples de Règles
+- "MFA obligatoire hors du bureau"
+- "Bloquer les connexions depuis des pays à risque"
+- "Limiter l'accès aux appareils non-enregistrés"
 
-- **Contrôles** (QUE faire) :
-  ```mermaid
-  graph LR
-    A[Accès] -->|Risque faible| B[Autoriser]
-    A -->|Risque moyen| C[Exiger MFA]
-    A -->|Risque élevé| D[Bloquer]
+### 4. Pourquoi ?
+✅ Adapte la sécurité au contexte  
+✅ Empêche les accès non autorisés  
+✅ Complète la stratégie Zero Trust
 
-### Lien :
-https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview?WT.mc_id=Portal-Microsoft_AAD_ConditionalAccess
+### 5. Lien ?
+https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview
