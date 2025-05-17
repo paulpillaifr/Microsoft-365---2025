@@ -36,3 +36,6 @@ graph TD
     F --> G[Grant Access]
     F --> H[Block]
     F --> I[Require MFA]
+```
+## Administrative unit:
+![image](https://github.com/user-attachments/assets/f7f4ba5c-1cfe-4f0f-b8e3-55aed7467ddd)
